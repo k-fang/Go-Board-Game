@@ -95,18 +95,20 @@ void board::checkPiece(int x, int y, int color) {
                 break;
             }
         }
-        if (s->y < size) {
-            if (s->y == size - 1) {
+        if (s->y < size - 1) {
+            //if (s->y == size - 1) {
                 
-            } else if (goBoard[s->y+1][s->x]->borw == 0 && goBoard[s->y+1][s->x]->checked != true) {
+            //} else 
+            if (goBoard[s->y+1][s->x]->borw == 0 && goBoard[s->y+1][s->x]->checked != true) {
                  //cout << "break 3";
                 break;
             }
         } 
-        if (s->x < size) {
-            if (s->x == size - 1) {
+        if (s->x < size - 1) {
+            //if (s->x == size - 1) {
                 
-            } else if (goBoard[s->y][s->x+1]->borw == 0 && goBoard[s->y][s->x+1]->checked != true) {
+            //} else 
+            if (goBoard[s->y][s->x+1]->borw == 0 && goBoard[s->y][s->x+1]->checked != true) {
                  //cout << "break 4";
                 break;
             }
@@ -124,18 +126,20 @@ void board::checkPiece(int x, int y, int color) {
                 queue.emplace_back(goBoard[s->y][s->x-1]);
             }
         }
-        if (s->y < size) {
-            if (s->y == size - 1) {
+        if (s->y < size - 1) {
+            //if (s->y == size - 1) {
                 
-            }else if (goBoard[s->y+1][s->x]->borw == color && goBoard[s->y+1][s->x]->checked != true) {
+            //}else 
+            if (goBoard[s->y+1][s->x]->borw == color && goBoard[s->y+1][s->x]->checked != true) {
                  //cout << " twice";
                 queue.emplace_back(goBoard[s->y+1][s->x]);
             }
         } 
-        if (s->x < size) {
-            if (s->x == size - 1) {
+        if (s->x < size - 1) {
+            //if (s->x == size - 1) {
             
-            } else if (goBoard[s->y][s->x+1]->borw == color && goBoard[s->y][s->x+1]->checked != true) {
+            //} else 
+            if (goBoard[s->y][s->x+1]->borw == color && goBoard[s->y][s->x+1]->checked != true) {
                 queue.emplace_back(goBoard[s->y][s->x+1]);
             }
         } 
@@ -204,18 +208,20 @@ void board::checkDead(int x, int y, int color) {
                 break;
             }
         }
-        if (s->y < size) {
-            if (s->y == size - 1) {
+        if (s->y < size - 1) {
+            //if (s->y == size - 1) {
                 
-            } else if (goBoard[s->y+1][s->x]->borw == 0 && goBoard[s->y+1][s->x]->checked != true) {
+            //} else 
+            if (goBoard[s->y+1][s->x]->borw == 0 && goBoard[s->y+1][s->x]->checked != true) {
                  //cout << "break 3";
                 break;
             }
         } 
-        if (s->x < size) {
-            if (s->x == size - 1) {
+        if (s->x < size - 1) {
+            //if (s->x == size - 1) {
                 
-            } else if (goBoard[s->y][s->x+1]->borw == 0 && goBoard[s->y][s->x+1]->checked != true) {
+            //} else 
+            if (goBoard[s->y][s->x+1]->borw == 0 && goBoard[s->y][s->x+1]->checked != true) {
                  //cout << "break 4";
                 break;
             }
@@ -232,20 +238,22 @@ void board::checkDead(int x, int y, int color) {
                 queue.emplace_back(goBoard[s->y][s->x-1]);
             }
         }
-        if (s->y < size) {
+        if (s->y < size - 1) {
             //cout << " inside if ";
             //cout << goBoard[s->y+1][s->x]->borw << color << goBoard[s->y+1][s->x]->checked;
-            if (s->y == size - 1) {
+            //if (s->y == size - 1) {
                 
-            } else if (goBoard[s->y+1][s->x]->borw == color && goBoard[s->y+1][s->x]->checked != true) {
+            //} else 
+            if (goBoard[s->y+1][s->x]->borw == color && goBoard[s->y+1][s->x]->checked != true) {
                  //cout << " twice";
                 queue.emplace_back(goBoard[s->y+1][s->x]);
             }
         } 
-        if (s->x < size) {
-            if (s->x == size - 1) {
+        if (s->x < size - 1) {
+            //if (s->x == size - 1) {
               
-            } else if (goBoard[s->y][s->x+1]->borw == color && goBoard[s->y][s->x+1]->checked != true) {
+            //} else 
+            if (goBoard[s->y][s->x+1]->borw == color && goBoard[s->y][s->x+1]->checked != true) {
                 queue.emplace_back(goBoard[s->y][s->x+1]);
             }
         } 
