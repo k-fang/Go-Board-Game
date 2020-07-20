@@ -44,7 +44,18 @@ public:
     // places a piece on the board, black: color = 1, white: color = 2
     void makeMove(int x, int y, int color);
 
-    // calculates dead pieces and removes them 
+    // checks if neighbouring opposite colour pieces are dead 
+    void checkNeighbouringDead(int x, int y, int color);
+
+    void checkPiece(int x, int y, int color);
+    
+    // void checkTop(int x, int y, int color);
+
+    // void checkRight(int x, int y, int color);
+    
+    // void checkLeft(int x, int y, int color);
+    
+    // checks if current move is valid and not immediately dead 
     void checkDead(int x, int y, int color);
         
     // prints board
