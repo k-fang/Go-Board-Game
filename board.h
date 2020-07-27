@@ -4,7 +4,7 @@
 //#include <utility>
 #include <vector>
 //#include "single.h"
-#include "score.h"
+//#include "score.cpp"
 using namespace std; 
 
 
@@ -12,13 +12,13 @@ class board{
 private:
    
     
-    score calculator;
-        
+    
     
     
 
     
 public:
+    
     class Single{
     public:
         int x;
@@ -63,6 +63,7 @@ public:
 
     vector<vector<Single*>> goBoard;
     int size; 
+    //score calculator;
 };
 
 #endif

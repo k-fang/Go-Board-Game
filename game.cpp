@@ -1,4 +1,5 @@
 #include "board.cpp"
+#include "score.cpp"
 #include <iostream>
 
 #include <algorithm>
@@ -21,6 +22,7 @@ int main() {
     string pass; 
     bool onePass = false;
     board gameBoard; 
+    score scoreBoard;
     
     while (cont) {
         gameBoard.printBoard();
@@ -72,4 +74,7 @@ int main() {
         
 
     }
+    scoreBoard.calcScore(gameBoard);
+    scoreBoard.printScore();
+
 }

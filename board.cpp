@@ -149,6 +149,12 @@ void board::checkPiece(int x, int y, int color) {
     //cout << "removed list size: " << removedList.size();
     for (auto const& i : removedList) {
             if (queue.empty()) {
+                
+                // if (i->borw == 1) {
+                //     calculator.addScoreToColor(2);
+                // } else if (i->borw == 2) {
+                //     calculator.addScoreToColor(1);
+                // }
                 i->borw = 0;
             }
             i->checked = false;
@@ -279,6 +285,7 @@ void board::checkDead(int x, int y, int color) {
 // prints board
 void board::printBoard() {
     int i = 1;
+    //calculator.printScore();
     cout << "   1   2   3   4   5   6   7   8   9 \n";
     for (int y = 0; y < size-1; y++) {
         cout << i << "  ";
